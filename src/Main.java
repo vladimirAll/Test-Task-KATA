@@ -7,7 +7,7 @@ public class Main {
         calculator.calc();
     }
 }
- class Calc {
+class Calc {
     static int meaning1;
     static int meaning2;
     static char mathOperator;
@@ -19,7 +19,7 @@ public class Main {
         System.out.println("ВВедите вычисляемое выражение:");
         Scanner scan = new Scanner(System.in);
         String expression = scan.nextLine();
-//
+
         char[] arrayChar = new char[10];
         for (int i = 0; i < expression.length(); i++) {
             arrayChar [i] = expression.charAt(i);
@@ -85,7 +85,7 @@ public class Main {
         } catch (Exception e) {
             throw new InputMismatchException("Введены неверные данные");
         }
-       // meaning2 = romanToArabian(element2, isRoman2);
+        // meaning2 = romanToArabian(element2, isRoman2);
         try {
             if (element2.equals("I")) {
                 isRoman2 = true;
@@ -130,7 +130,7 @@ public class Main {
             System.out.println("Результат:");
             System.out.println(romanResult);
 
-         } else {
+        } else {
             meaning1 = Integer.parseInt(element1);
             meaning2 = Integer.parseInt(element2);
             result = calculation(meaning1, meaning2, mathOperator);
@@ -155,7 +155,7 @@ public class Main {
         return s;
     }
 
-     static int calculation (int value1, int value2, char operator) {
+    static int calculation (int value1, int value2, char operator) {
         int result = 0;
         switch (operator) {
             case '+':
@@ -178,7 +178,3 @@ public class Main {
         return result;
     }
 }
-
-
-
-
