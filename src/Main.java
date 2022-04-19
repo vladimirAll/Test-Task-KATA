@@ -3,11 +3,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Calc calculator = new Calc();
-        calculator.calc();
+        System.out.println("ВВедите вычисляемое выражение:");
+        Scanner scan = new Scanner(System.in);
+        String expression = scan.nextLine();
+        calc(expression);
+
     }
-}
-class Calc {
+
     static int meaning1;
     static int meaning2;
     static char mathOperator;
@@ -15,11 +17,9 @@ class Calc {
     static boolean isRoman1;
     static boolean isRoman2;
 
-    public void calc () {
-        System.out.println("ВВедите вычисляемое выражение:");
-        Scanner scan = new Scanner(System.in);
-        String expression = scan.nextLine();
+    public static String calc (String expression) {
 
+//
         char[] arrayChar = new char[10];
         for (int i = 0; i < expression.length(); i++) {
             arrayChar [i] = expression.charAt(i);
@@ -137,6 +137,7 @@ class Calc {
             System.out.println("Результат: ");
             System.out.println(result);
         }
+        return String.valueOf(result);
     }
 
     static String listOfRomanNumerals(int number) {
